@@ -11,16 +11,19 @@ Write a C program that:
 
 void print_array(int *arr, int len){
     for (int j=0; j<len; j++){
-        printf("The array looks like: %d%s",  *(arr + j), (j+1==len) ? "\n" : " ");
+        printf("%d%s",  *(arr + j), (j+1==len) ? "\n" : " ");
     }
 }
 
 int main(){
     int arr[5];
     for (int i=0; i<5; i++){
+        printf("Enter the array elements: \n");
         // arr+i is already the address of element i
         scanf("%d", arr+i); // passes the ADDRESS -> same as scanf("%d", &arr[i]);
     }
+    
+    printf("The array looks like:\n");
     print_array(arr, 5);
     return 0;
 }
