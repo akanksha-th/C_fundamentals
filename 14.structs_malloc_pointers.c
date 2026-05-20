@@ -1,4 +1,4 @@
-// gcc .\14_structs_malloc_pointers.c -o out.exe; if ($?) { .\out.exe }
+// gcc .\14.structs_malloc_pointers.c -o out.exe; if ($?) { .\out.exe }
 
 /*
 Write a C program that:
@@ -42,5 +42,15 @@ int main(){
 // BONUS: Why is it more efficient to pass struct Student *p to a function instead of struct Student s? What actually happens in memory in each case?
 
 /*
+'''// Passing by value — COPIES the entire struct
+void print_student(struct Student s) {
+    // 58 bytes copied onto the stack every call
+}
 
+// Passing by pointer — only copies the ADDRESS
+void print_student(struct Student *p) {
+    // 8 bytes (just an address) copied — much cheaper!
+}'''
+
+For small structs it barely matters, but imagine a struct with 10,000 bytes of data — copying it every function call would be very wasteful.
 */
