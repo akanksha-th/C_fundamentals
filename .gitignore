@@ -8,6 +8,10 @@ bias_detector/.data/
 
 # C extensions
 *.so
+*.exe
+*.out
+a.out
+.vscode/
 
 # Distribution / packaging
 .Python

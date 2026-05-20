@@ -1,6 +1,3 @@
-# LLM from Scratch
+# C Fundamentals 🖥️
 
-This repository documents building of an LLM completely from scratch.
-
-The repository contains:
-1. A Byte Pair Encoding (BPE) Tokenizer implemented from scratch.
+A structured collection of C programming concepts, examples, and exercises - built as a personal learning reference. :D
