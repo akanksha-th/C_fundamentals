@@ -55,10 +55,22 @@ int main(){
     return 0;
 }
 
-// BONUS: What is a typedef and how can it make working with structs cleaner?
+// BONUS:   1. What is the difference between passing Student s vs Student *s to a function, in terms of what happens in memory?
+//          2. What is a typedef and how can it make working with structs cleaner?
 
 /*
-Right now we write struct Student everywhere. typedef lets us create an alias so we can just write Student:
+1. when void fn(Student s) -> s IS the struct —> a full COPY is made
+void fn(Student *s) -> s is a POINTER —> only the address is copied (8 bytes)
+
+Student s  –>  function gets its own private copy
+               - changes inside don't affect original
+               - costs sizeof(Student) bytes on the stack every call
+
+Student *s –>  function gets the address of the original
+               - changes inside DO affect the original
+               - costs only 8 bytes (pointer size) regardless of struct size
+
+2. Right now we write struct Student everywhere. typedef lets us create an alias so we can just write Student:
 '''// Without typedef
 struct Student st1;
 void print_student(struct Student *p);
