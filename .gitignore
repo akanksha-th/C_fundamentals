@@ -55,5 +55,6 @@ dkms.conf
 *.dwo
 
 students.txt
+students.bin
 registry.txt
 .vscode/
