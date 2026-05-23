@@ -7,7 +7,7 @@
 3. Prints them using printf
 */
 
-# include <stdio.h> // # means it is a preprocessor command
+# include <stdio.h> // # means it is a preprocessor command -> before the code compiles, the preprocessor runs first and does text substitution
 /*
 tells the preprocessor to paste the contents of the stdio.h header file into our code.
 it gives our program access to functions like printf and scanf that are defined there.
