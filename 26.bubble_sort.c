@@ -14,7 +14,6 @@ Sorting: 2 types of sorting algorithms:
 
 */
 
-
 /*
 Bubble Sort: a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
 Bubble sort makes repeated passes through the array. On each pass it compares every pair of adjacent elements and swaps them if they're in the wrong order. 
