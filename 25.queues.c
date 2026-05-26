@@ -14,6 +14,7 @@ Implement a queue using an array with:
 # include <stdio.h>
 
 void enqueue(int *queue, int *back, int value){
+    if (*back >= 99) { printf("Queue overflow\n"); return; }
     (*back)++;
     queue[*back] = value;
 }
@@ -31,8 +32,9 @@ void print_queue(int *queue, int front, int back){
 
     printf("Queue (front to back): ");
     for (int i= front; i<=back; i++){
-        printf("%d\n", queue[i]);
+        printf("%d ", queue[i]);
     }
+    printf("\n");
 }
 
 int main(){

@@ -72,3 +72,45 @@ If top started at 0 you’d need different push/pop logic (e.g., write to stack[
 push modifies the top index (it needs to increment/decrement it), so it must receive a pointer (int *top) to change the caller’s variable.
 print_stack only reads the current top to iterate and print elements; it does not modify it, so passing by value (int top) is sufficient and clearer.
 */
+
+
+// Write a stack that stores characters instead of integers.
+
+/*
+# include <stdio.h>
+
+void push(char *stack, int *top, char value){
+    if (*top >= 99) { printf("stack overflow\n"); return; }
+    (*top)++;
+    stack[*top] = value;
+}
+
+char pop(char *stack, int *top){
+    if (*top < 0) { printf("stack underflow\n"); return '\0';}
+    char popped = stack[*top];
+    (*top)--;
+    return popped;
+}
+
+void print_stack(char *stack, int top){
+    if (top < 0) { printf("stack underflow\n"); return;}
+    for (int i=0; i<=top; i++){
+         printf("%c ", stack[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    char stack[100];
+    int top = -1;
+    push(stack, &top, 'h');
+    push(stack, &top, 'e');
+    push(stack, &top, 'l');
+    push(stack, &top, 'l');
+    push(stack, &top, 'o');
+    print_stack(stack, top);
+    pop(stack, &top);
+    print_stack(stack, top);
+    return 0;
+}
+*/
