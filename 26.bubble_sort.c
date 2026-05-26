@@ -1,6 +1,21 @@
 // gcc .\26.bubble_sort.c -o out.exe; if ($?) { .\out.exe }
 
 /*
+Sorting: 2 types of sorting algorithms:
+1. Comparison-based sorts:  1. bubble sort
+                            2. selection sort
+                            3. insertion sort
+                            4. merge sort
+                            5. quick sort
+                            6. heap sort
+2. Non-comparison-based sorts:  1. counting sort
+                                2. radix sort
+                                3. bucket sort
+
+*/
+
+
+/*
 Bubble Sort: a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.
 Bubble sort makes repeated passes through the array. On each pass it compares every pair of adjacent elements and swaps them if they're in the wrong order. 
 After each pass the largest unsorted element has "bubbled up" to its correct position at the end. With the early exit optimisation, if a full pass completes with no swaps, the array is already sorted and we stop early.
