@@ -46,6 +46,25 @@ void bubble_sort(int *arr, int n){
     }
 }
 
+void bubble_sort_cmp(int *arr, int n, int (*cmp)(int, int)){
+    for (int i=0; i<n-1; i++){
+        int swappped = 0;
+        for (int j=0; j<n-1; j++){
+            if (cmp(arr[j], arr[j+1]) > 0 ){ // checks if "true" => 1 > 0 condition is met, swap
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                swappped = 1;
+            }
+        }
+        if (!swappped) break;
+    }
+}
+
+// comparators - return 1 (true) or 0 (false)
+int ascending(int a, int b) { return a>b; }
+int descending(int a, int b) { return a<b; }
+
 void print_arr(int *arr, int n){
     printf("Sorted array: ");
     for (int i=0; i<n; i++){
@@ -59,6 +78,9 @@ int main(){
     int n = sizeof(arr) / sizeof(arr[0]);
 
     bubble_sort(arr, n);
+    print_arr(arr, n);
+
+    bubble_sort_cmp(arr, n, descending);
     print_arr(arr, n);
 
     return 0;
